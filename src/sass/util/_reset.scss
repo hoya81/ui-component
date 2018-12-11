@@ -1,0 +1,22 @@
+*{ margin:0; padding:0; box-sizing: border-box;}
+
+html, body{ min-width:$minWidth; }
+
+body{ background:$bodyColor; color:$fontColor; margin:0; padding:0; font-family:$fontFamily; font-size:$baseFontSize; line-height:1; }
+
+button{ outline:0; background:none; border:0; cursor:pointer; }
+
+img{ border:0; }
+
+ul, ol{ list-style:none; }
+
+table{ border-spacing:0; }
+
+caption{ height:0; overflow:hidden; font-size:0; }
+
+a{ color:$linkColor; text-decoration: none;}
+
+a:hover{ color:$linkHoverColor; }
+
+
+.gnbContainer{ width:1100px; }

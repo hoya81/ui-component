@@ -1,0 +1,83 @@
+.navigation{
+    position: relative;
+    width:100%;
+    >ul{
+        >li{
+            position: relative;
+            >a{
+                display: block;                
+                width:100%;
+                padding:0 $controllGutter;
+                height:$controllHeight;
+                line-height: $controllLineHeight;
+                color:$mutedColor;
+                text-align: center;
+                border-bottom:1px solid $borderColor;
+            }   
+            &>a.active{
+                color:$linkHoverColor;
+                border-bottom:1px solid $linkHoverColor;
+            };
+            &>a:hover{
+                color:$linkHoverColor;               
+            };
+            >div{
+                width:100%;        
+                height:0;
+                overflow: hidden;
+                >ul{   
+                    //transform: translateY(-100%);              
+                    >li{
+                        width:100%;
+                        >a{
+                            display: block;                
+                            width:100%;
+                            padding:0 $controllGutter;
+                            height:$controllHeight;
+                            line-height: $controllLineHeight;
+                            color:$mutedColor;
+                            text-align: center;
+                        } 
+                        &>a.active{
+                            color:$linkHoverColor;
+                        };
+                        &>a:hover{
+                            color:$linkHoverColor;               
+                        };
+                    }
+                }
+            }
+        }
+    }
+    &[data-navi-type=horizontal]{
+        >ul{
+            display: flex;
+            flex-wrap: wrap;
+            >li{
+                flex:1;
+                >div{
+                    left:0;
+                    position: absolute;
+                    top:$controllHeight;
+                    >ul{                    
+                        
+                        background: #ffffff;
+                        border:1px solid $borderColor;
+                        border-top:none;
+                    }
+                }
+            }
+        } 
+    }
+    &[data-navi-type=vertical]{
+        >ul{
+            width:200px;
+            margin:0 auto;
+            >li{
+                >ul{                    
+                    border-bottom:1px solid $borderColor;
+                }
+            }
+        } 
+    }
+}

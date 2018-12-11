@@ -1,0 +1,42 @@
+.tab-wrap{
+    position: relative;
+    width:100%;
+    .tab-menu{
+        display: flex;
+        flex-wrap: wrap;
+        li{
+            flex:1;
+            button{
+                display: block;                
+                width:100%;
+                padding:0 $controllGutter;
+                height:$controllHeight;
+                line-height: $controllLineHeight;
+                color:$mutedColor;
+                text-align: center;
+                border-bottom:1px solid $borderColor;
+            }   
+            &.active>button{
+                color:$linkHoverColor;
+                border-bottom:1px solid $linkHoverColor;
+            };
+            &>button:hover, &>button:focus{
+                color:$fontColor;               
+            };
+            &[disabled]>button{
+                cursor: default;
+                color:$mutedColor;
+            };
+        }
+    }
+    .tab-contents{
+        margin: 20px auto;
+        .tab-content{
+            display: none;
+            text-align: center;
+            &.active{
+                display: block;
+            }            
+        }
+    }
+}

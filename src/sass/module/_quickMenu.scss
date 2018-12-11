@@ -1,0 +1,29 @@
+#quickMenu{
+    @include position-abs($width: 160px, $left: 50%, $top: 0);
+    //@include bg($bg: 'btn_quick.png', $position: 0 0);
+    margin-left: $minWidth / 2;
+    &.fix{
+        position:fixed;
+    }
+    ul {
+      //  @include hide-text();
+        li {
+            a {
+               // @include bg($bg: 'btn_quick.png', $position:-161px 0);               
+                display: block;
+                height:$controllHeight;
+                line-height: $controllLineHeight;
+                text-align: center;
+                margin: 0 auto;
+                opacity:0.5;
+                transition: 0.1s;
+                &.active, &:hover{
+                    opacity:1;
+                    color:$linkHoverColor;
+                    transition: 0.3s;
+                }
+            }
+            
+        }
+    }
+}

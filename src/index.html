@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Component</title>
+    </head>
+    <body>
+        <div id="container" class="container">
+            <header id="header" data-id="header">
+                Header
+            </header>
+            <div id="contents">
+                <section data-id="section-navigation">
+                    <h1>NAVIGATION</h1>
+                    <div class="col3-box">                        
+                        <div id="navi-1" class="navigation" data-navi-type="horizontal">                            
+                            <ul>
+                                <li>
+                                    <a href="javascript:;" data-key="menu1" data-depth="depth1">MENU1</a>
+                                    <div>
+                                        <ul>
+                                            <li><a href="javascript:;" data-key="menu1-1">MENU1-1</a></li>
+                                            <li><a href="javascript:;" data-key="menu1-2">MENU1-2</a></li>
+                                            <li><a href="javascript:;" data-key="menu1-3">MENU1-3</a></li>
+                                            <li><a href="javascript:;" data-key="menu1-4">MENU1-4</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="javascript:;" data-key="menu2" data-depth="depth1">MENU2</a>
+                                    <div>
+                                        <ul>
+                                            <li><a href="javascript:;" data-key="menu2-1">MENU2-1</a></li>
+                                            <li><a href="javascript:;" data-key="menu2-2">MENU2-2</a></li>
+                                            <li><a href="javascript:;" data-key="menu2-3">MENU2-3</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li><a href="javascript:;" data-key="menu3" data-depth="depth1">MENU3</a></li>
+                            </ul>
+                        </div>
+                        <div id="navi-2" class="navigation" data-navi-type="vertical">
+                            <ul>
+                                <li>
+                                    <a href="javascript:;" data-key="menu1">MENU1</a>
+                                    <div>
+                                        <ul>
+                                            <li><a href="javascript:;" data-key="menu1-1">MENU1-1</a></li>
+                                            <li><a href="javascript:;" data-key="menu1-2">MENU1-2</a></li>
+                                            <li><a href="javascript:;" data-key="menu1-3">MENU1-3</a></li>
+                                            <li><a href="javascript:;" data-key="menu1-4">MENU1-4</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="javascript:;" data-key="menu2">MENU2</a>
+                                    <div>
+                                        <ul>
+                                            <li><a href="javascript:;" data-key="menu2-1">MENU2-1</a></li>
+                                            <li><a href="javascript:;" data-key="menu2-2">MENU2-2</a></li>
+                                            <li><a href="javascript:;" data-key="menu2-3">MENU2-3</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li><a href="javascript:;" data-key="menu3">MENU3</a></li>
+                            </ul>
+                        </div>
+                        <div id="navi-3" class="navigation" data-navi-type="vertical">                            
+                            <ul>
+                                <li>
+                                    <a href="javascript:;" data-key="menu1">MENU1</a>
+                                    <div>
+                                        <ul>
+                                            <li><a href="javascript:;" data-key="menu1-1">MENU1-1</a></li>
+                                            <li><a href="javascript:;" data-key="menu1-2">MENU1-2</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="javascript:;" data-key="menu2">MENU2</a>
+                                    <div>
+                                        <ul>
+                                            <li><a href="javascript:;" data-key="menu2-1">MENU2-1</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li><a href="javascript:;" data-key="menu3">MENU3</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section data-id="section-tabMenu">
+                    <h1>TAB MENU</h1>
+                    <div id="tabMenu" class="tab-wrap">
+                        <ul class="tab-menu" data-tab="tab-wrap">
+                            <li data-tab="tab-1" class="active"><button>tab-1</button></li>
+                            <li data-tab="tab-2"><button>tab-2</button></li>
+                            <li data-tab="tab-3"><button>tab-3</button></li>
+                            <li data-tab="tab-4" disabled><button>tab-4</button></li>
+                        </ul>
+                        <div class="tab-contents" data-tab="tab-contents">
+                            <div class="tab-content"  data-tab="tab-1">
+                                TAB-1
+                            </div>
+                            <div class="tab-content"  data-tab="tab-2">
+                                TAB-2
+                            </div>
+                            <div class="tab-content"  data-tab="tab-3">
+                                TAB-3
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section data-id="section-selectBox">
+                    <h1>SELECT BOX</h1>
+                    <div id="selectBox" class="select-box" >
+                        <div class="select-tit" data-select="title" data-value="null" >선택해주세요.</div> <!--비활성화시 : disabled-->
+                        <ul class="select-list" data-select="list-wrap">
+                            <li data-value="1">1</li>
+                            <li data-value="2">2</li>
+                            <li data-value="3">3</li>
+                            <li data-value="4">4</li>
+                            <li data-value="5">5</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </div>   
+        <div id="footer">
+            <p>Copyright &copy; NCSOFT Corporation. All Rights Reserved.</p>
+        </div>
+        <aside id="quickMenu" class="quick-menu">
+            <ul class="menu-list">
+                <li data-list="list"><a href="#header">TOP</a></li>
+                <li data-list="list"><a href="#section-navigation">NAVIGATION</a></li> 
+                <li data-list="list"><a href="#section-tabMenu">TAB MENU</a></li> 
+                <li data-list="list"><a href="#section-selectBox">SELECT BOX</a></li>
+            </ul>
+        </aside>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>     
+        <script src="vendor/greensock-business-green/TweenMax.min.js"></script>  
+        <script src="vendor/greensock-business-green/plugins/ScrollToPlugin.min.js"></script>  
+    </body>
+</html>

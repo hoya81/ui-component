@@ -1,0 +1,52 @@
+.select-box {
+    position:relative;
+    width:100%;
+    .select-tit {
+        position:relative;
+        text-align:left;
+        cursor:pointer;
+        padding:0 50px 0 $controllGutter;
+        height:$controllHeight;
+        line-height: $controllLineHeight;
+        overflow: hidden;
+        border:1px solid $borderColor;
+        &:before {
+            @include position-abs($width: 50px, $height: 100%, $right: 0, $top: 0);
+            @include bg($bg:'common/icon_select_arrow.png', $position: 0 50%);
+            content:"";  display:block;
+        }    
+        &[disabled] {
+            cursor:default; 
+            color:$mutedColor;
+
+            
+        }
+        &[disabled]:before{
+            opacity: 0.3;
+        }
+        &.active {
+            &:before {background-position-x:-53px;}
+        }
+    }
+    .select-list {
+        display:none;
+        position: absolute;
+        width:100%;
+        top:$controllHeight;
+        background:$controllBgColor;
+        border:1px solid $borderColor;
+        border-top:none;
+        overflow: hidden;
+        &.active {display:block;}
+        li {
+            padding:0 $controllGutter;
+            height:$controllHeight;
+            line-height: $controllLineHeight;
+            border-top:1px solid $borderColor;
+            cursor:pointer;
+            @include ellipsis();
+            &:hover {background:$controllHoverBgColor;}
+            &:first-child{border-top:none;}
+        }
+    }
+}
